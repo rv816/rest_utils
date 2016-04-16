@@ -2,7 +2,7 @@ from django.test import TestCase
 from django.db import models
 from django.test import SimpleTestCase
 from django.test.utils import isolate_apps
-
+import requests
 class TestModelDefinition(SimpleTestCase):
     @isolate_apps('copysc')
     def test_model_definition(self):
@@ -10,4 +10,6 @@ class TestModelDefinition(SimpleTestCase):
 	assert True
 
 # Create your tests here.
+
+
 

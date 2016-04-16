@@ -15,7 +15,13 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-
+from copyscreen import views
+from rest_framework.urlpatterns import format_suffix_patterns
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^copyscreen/$', views.hello_world),
+    url(r'^copyscreen/clip$', views.process_url)
 ]
+
+urlpatterns = format_suffix_patterns(urlpatterns)
+
