@@ -19,7 +19,7 @@ def process_url(request):
     link = data.get('link')
     response = {}
     try:
-        converted_link = convert_clipboard(link)
+        converted_link = convert_clipboard(link, copy=False)
         response['link'] = converted_link
         return Response(response, status=status.HTTP_200_OK)
     except Exception as err:
